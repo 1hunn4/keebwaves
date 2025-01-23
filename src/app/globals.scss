@@ -12,9 +12,9 @@
 
 body {
   color: var(--foreground);
-  background: var(--background);
+  background: linear-gradient(135deg, #EEEBE7, #E8E1F5);
   font-family: var(--font-nunito-sans);
-  height: 200vh;
+  height: 100vh;
 }
 
 a {

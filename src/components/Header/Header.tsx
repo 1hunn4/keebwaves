@@ -31,10 +31,10 @@ const Header = () => {
                 <div className={styles.header__logo}>KeebWaves</div>
                 <nav className={styles.header__nav}>
                     {/* TODO: change href and text content */}
-                    <Link href="/" className={styles.header__nav_link}>Home</Link>
-                    <Link href="/" className={styles.header__nav_link}>Products</Link>
-                    <Link href="/" className={styles.header__nav_link}>About</Link>
-                    <Link href="/" className={styles.header__nav_link}>Contact</Link>
+                    <Link href="/" className={styles.header__nav_link}>TODO: ADD</Link>
+                    <Link href="/" className={styles.header__nav_link}>TODO: ADD</Link>
+                    <Link href="/" className={styles.header__nav_link}>TODO: ADD</Link>
+                    <Link href="/" className={styles.header__nav_link}>TODO: ADD</Link>
                 </nav>
             </div>
         </header>
