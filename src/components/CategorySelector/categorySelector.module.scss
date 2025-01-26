@@ -1,0 +1,33 @@
+.categorySelector {
+    width: 100%;
+    height: 210px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &__icons {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: row;
+        gap: 32px;
+    }
+
+    &__icon {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        text-align: center;
+        cursor: pointer;
+
+        img {
+            width: 64px;
+            height: 64px;
+            margin-bottom: 8px;
+        }
+    }
+
+
+}

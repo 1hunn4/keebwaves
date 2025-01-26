@@ -1,9 +1,15 @@
+*, ::after, ::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 :root {
   --background: #ffffff;
   --foreground: #171717;
 }
 
-@media (prefers-color-scheme: light) {
+@media (prefers-color-scheme: dark) {
   :root {
     --background: #0a0a0a;
     --foreground: #ededed;
@@ -12,7 +18,7 @@
 
 body {
   color: var(--foreground);
-  background: linear-gradient(135deg, #EEEBE7, #E8E1F5);
+  background: var(--background);
   font-family: var(--font-nunito-sans);
   height: 100vh;
 }
