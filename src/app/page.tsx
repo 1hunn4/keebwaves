@@ -1,6 +1,6 @@
-import Header from '@/components/Header/Header';
-import BannerVideo from '@/components/BannerVideo/BannerVideo';
-import ProductCatalogView from '@/components/ProductCatalogView/ProductCatalogView';
+import Header from '@/components/modules/Header/Header';
+import BannerVideo from '@/components/modules/BannerVideo/BannerVideo';
+import ProductCatalogView from '@/components/modules/ProductCatalogView/ProductCatalogView';
 
 
 const Home = () => {
