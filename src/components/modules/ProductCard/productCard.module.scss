@@ -8,10 +8,6 @@
   flex-direction: column;
   gap: 12px;
 
-  &:hover {
-    transform: translateY(-0.2px);
-    box-shadow: 0 2px 14px rgba(219, 219, 219, 0.08);
-  }
 }
 
 .image {
