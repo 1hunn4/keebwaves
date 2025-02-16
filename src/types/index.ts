@@ -10,4 +10,14 @@ export interface Product {
     slug: string;
     price: number;
     image: string;
+    description: string;
+    specifications: {
+        length: string;
+        width: string;
+        thickness: string;
+        material: string;
+        surface: string;
+        weight: string;
+        color: string;
+    }
 }
