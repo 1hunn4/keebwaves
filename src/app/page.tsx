@@ -7,7 +7,7 @@ const Home = () => {
   return (
     <>
       <Header />
-      <BannerVideo videoSrc={'/assets/bannerVideo/bannerVideo.webm'} />
+      <BannerVideo videoSrc={'/assets/bannerVideo/bannerVideo.mp4'} />
       <main>
         <ProductCatalogView />
       </main>

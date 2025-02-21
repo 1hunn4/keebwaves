@@ -29,7 +29,7 @@ const Header = () => {
                 <div className={styles.header__logo}>KeebWaves</div>
                 <nav className={styles.header__nav}>
                     <Link href="#catalog" onClick={(event) => handleScroll(event, "catalog")} className={styles.header__link}>Каталог товаров</Link>
-                    <Link href="/" className={styles.header__link}>Как отследить заказ</Link>
+                    <Link href="/tracking" className={styles.header__link}>Как отследить заказ</Link>
                     <Link href="/" className={styles.header__link}>FAQ</Link>
                     <Link href="/" className={styles.header__link}>Поддержка</Link>
                 </nav>

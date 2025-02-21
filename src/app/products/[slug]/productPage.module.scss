@@ -1,9 +1,19 @@
+@font-face {
+  font-family: 'DrukWideCyr';
+  src: url('../../../customFonts/fonts/drukwidecyr-bold.eot');
+  src: url('../../../customFonts/fonts/drukwidecyr-bold.eot?#iefix') format('embedded-opentype'),
+    url('../../../customFonts/fonts/drukwidecyr-bold.woff2') format('woff2'),
+    url('../../../customFonts/fonts/drukwidecyr-bold.woff') format('woff'),
+    url('../../../customFonts/fonts/drukwidecyr-bold.ttf') format('truetype'),
+    url('../../../customFonts/fonts/drukwidecyr-bold.svg#drukwidecyr-bold') format('svg');
+}
 
 .container {
   background: #0a0a0a;
   color: #ededed;
   min-height: 100vh;
   padding: 2rem 1rem;
+  margin-top: 50px;
 }
 
 .mainSection {
@@ -147,6 +157,7 @@
 }
 
 .relatedTitle {
+  font-family: 'DrukWideCyr', Arial, sans-serif;
   font-size: 1.5rem;
   margin-bottom: 2rem;
   font-weight: 500;
