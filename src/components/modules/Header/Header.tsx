@@ -45,7 +45,7 @@ const Header = () => {
     return (
         <header className={`${styles.header} ${isScrolled ? styles['header--scrolled'] : ''}`}>
             <div className={styles.header__container}>
-                <div className={styles.header__logo}>KeebWaves</div>
+                <Link href="/" className={styles.header__logo}>KeebWaves</Link>
                 <nav className={styles.header__nav}>
                     <Link href="/#catalog" onClick={(event) => handleScroll(event, "catalog")} className={styles.header__link}>Каталог товаров</Link>
                     <Link href="/tracking" className={styles.header__link}>Как отследить заказ</Link>
