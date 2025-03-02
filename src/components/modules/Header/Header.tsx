@@ -49,7 +49,7 @@ const Header = () => {
                 <nav className={styles.header__nav}>
                     <Link href="/#catalog" onClick={(event) => handleScroll(event, "catalog")} className={styles.header__link}>Каталог товаров</Link>
                     <Link href="/tracking" className={styles.header__link}>Как отследить заказ</Link>
-                    <Link href="/" className={styles.header__link}>FAQ</Link>
+                    <Link href="/faq" className={styles.header__link}>FAQ</Link>
                     <Link href="/" className={styles.header__link}>Поддержка</Link>
                 </nav>
                 <button className={styles.header__cart}><img src='/assets/cart.svg' alt='Корзина' /></button>
