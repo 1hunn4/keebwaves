@@ -1,14 +1,28 @@
+'use client';
+import { useState } from 'react';
 import { notFound } from 'next/navigation';
 import { products } from '@/data';
 import ProductCard from '@/components/modules/ProductCard/ProductCard';
 import Header from '@/components/modules/Header/Header';
 import styles from './productPage.module.scss';
+import { useCart } from '@/contexts/CartContext';
 
 interface ProductPageProps {
   params: { slug: string };
 }
 
 const ProductPage = ({ params }: ProductPageProps) => {
+  const { addToCart } = useCart();
+  const [isAdded, setIsAdded] = useState(false);
+
+  const handleAddToCart = () => {
+    if (product) {
+      addToCart(product);
+      setIsAdded(true);
+      setTimeout(() => setIsAdded(false), 2000);
+    }
+  };
+
   const product = products.find((p) => p.slug === params.slug);
   const relatedProducts = products.filter((p) => p.category === product?.category && p.id !== product?.id).slice(0, 4);
 
@@ -18,7 +32,7 @@ const ProductPage = ({ params }: ProductPageProps) => {
 
   return (
     <>
-    <Header />
+      <Header />
       <div className={styles.container}>
         <section className={styles.mainSection}>
           <div className={styles.mediaContainer}>
@@ -75,8 +89,11 @@ const ProductPage = ({ params }: ProductPageProps) => {
               </div>
             </div>
 
-            <button className={styles.addToCart}>
-              Добавить в корзину
+            <button
+              className={`${styles.addToCart} ${isAdded ? styles.added : ''}`}
+              onClick={handleAddToCart}
+            >
+              {isAdded ? 'Добавлено!' : 'Добавить в корзину'}
               <span className={styles.cartIcon}></span>
             </button>
           </div>

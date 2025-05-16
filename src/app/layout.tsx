@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { CartProvider } from '@/contexts/CartContext';
 import { Nunito_Sans } from "next/font/google";
 import "./globals.scss";
 
@@ -19,10 +20,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body
-        className={`${nunitoSans.variable} antialiased`}
-      >
-        {children}
+      <body className={`${nunitoSans.variable} antialiased`}>
+        <CartProvider>
+          {children}
+        </CartProvider>
       </body>
     </html>
   );

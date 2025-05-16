@@ -1,0 +1,122 @@
+@use "../variables.scss" as *;
+
+.container {
+  background: $color-background;
+  color: $color-text;
+  min-height: 100vh;
+  padding: 2rem 1rem;
+  margin-top: 50px;
+}
+
+.mainSection {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 2rem 0;
+}
+
+.title {
+  font-family: $font-primary;
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+}
+
+.itemsList {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  margin-bottom: 3rem;
+}
+
+.cartItem {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  padding: 1.5rem;
+  background: $color-content-background;
+  border-radius: 12px;
+  border: 1px solid rgba($color-text, 0.1);
+}
+
+.productImage {
+  width: 120px;
+  height: 120px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.productInfo {
+  flex: 1;
+  
+  h3 {
+    margin: 0 0 0.5rem;
+    font-size: 1.25rem;
+  }
+}
+
+.removeButton {
+  background: none;
+  border: 1px solid rgba($color-text, 0.2);
+  color: $color-text;
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.2s;
+
+  &:hover {
+    border-color: $color-accent;
+    color: $color-accent;
+  }
+}
+
+.summary {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2rem;
+  background: $color-content-background;
+  border-radius: 12px;
+  border: 1px solid rgba($color-text, 0.1);
+
+  h2 {
+    margin: 0;
+    font-size: 1.5rem;
+  }
+}
+
+.checkoutButton {
+  background: $color-accent;
+  color: $color-background;
+  border: none;
+  padding: 1rem 2rem;
+  border-radius: 8px;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: transform 0.2s;
+
+  &:hover {
+    transform: translateY(-2px);
+  }
+}
+
+.emptyCart {
+  text-align: center;
+  padding: 4rem;
+  
+  p {
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+  }
+}
+
+.continueShopping {
+  color: $color-accent;
+  text-decoration: none;
+  border: 1px solid $color-accent;
+  padding: 1rem 2rem;
+  border-radius: 8px;
+  transition: all 0.2s;
+
+  &:hover {
+    background: rgba($color-accent, 0.1);
+  }
+}

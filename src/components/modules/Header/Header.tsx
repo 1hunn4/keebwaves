@@ -4,8 +4,11 @@ import React, { useEffect, useState } from 'react';
 import Link from 'next/link';
 import styles from './header.module.scss';
 import { useRouter, usePathname } from 'next/navigation';
+import { useCart } from '@/contexts/CartContext';
 
 const Header = () => {
+    const { totalItems } = useCart();
+
     const [isScrolled, setIsScrolled] = useState(false);
     const router = useRouter();
     const pathname = usePathname();
@@ -52,7 +55,12 @@ const Header = () => {
                     <Link href="/faq" className={styles.header__link}>FAQ</Link>
                     <Link href="/" className={styles.header__link}>Поддержка</Link>
                 </nav>
-                <button className={styles.header__cart}><img src='/assets/cart.svg' alt='Корзина' /></button>
+                <Link href="/cart" className={styles.header__cart}>
+                    <img src='/assets/cart.svg' alt='Корзина' />
+                    {totalItems > 0 && (
+                        <span className={styles.cartBadge}>{totalItems}</span>
+                    )}
+                </Link>
             </div>
         </header>
     );

@@ -1,12 +1,14 @@
 import Link from 'next/link';
 import styles from './productCard.module.scss';
 import { Product } from '@/types';
+import { useCart } from '@/contexts/CartContext';
 
 interface ProductCardProps {
     product: Product;
 }
 
 const ProductCard: React.FC<ProductCardProps> = ({ product }) => {
+    const { addToCart } = useCart();
     return (
         <div className={styles.productCard}>
             <Link
@@ -23,7 +25,10 @@ const ProductCard: React.FC<ProductCardProps> = ({ product }) => {
 
             <div className={styles.priceAndCart}>
                 <p className={styles.price}>{product.price.toLocaleString('ru-RU')} ₽</p>
-                <button className={styles.addButton}>
+                <button
+                    className={styles.addButton}
+                    onClick={() => addToCart(product)}
+                >
                     <img src="/assets/cart.svg" alt="Корзина" />
                 </button>
             </div>
