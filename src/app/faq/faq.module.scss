@@ -1,13 +1,16 @@
 @use "../variables.scss" as *;
 
 @font-face {
-  font-family: 'DrukWideCyr';
-  src: url('../../customFonts/fonts/drukwidecyr-bold.eot');
-  src: url('../../customFonts/fonts/drukwidecyr-bold.eot?#iefix') format('embedded-opentype'),
-    url('../../customFonts/fonts/drukwidecyr-bold.woff2') format('woff2'),
-    url('../../customFonts/fonts/drukwidecyr-bold.woff') format('woff'),
-    url('../../customFonts/fonts/drukwidecyr-bold.ttf') format('truetype'),
-    url('../../customFonts/fonts/drukwidecyr-bold.svg#drukwidecyr-bold') format('svg');
+  font-family: "DrukWideCyr";
+  src: url("../../customFonts/fonts/drukwidecyr-bold.eot");
+  src:
+    url("../../customFonts/fonts/drukwidecyr-bold.eot?#iefix")
+      format("embedded-opentype"),
+    url("../../customFonts/fonts/drukwidecyr-bold.woff2") format("woff2"),
+    url("../../customFonts/fonts/drukwidecyr-bold.woff") format("woff"),
+    url("../../customFonts/fonts/drukwidecyr-bold.ttf") format("truetype"),
+    url("../../customFonts/fonts/drukwidecyr-bold.svg#drukwidecyr-bold")
+      format("svg");
 }
 
 .container {
@@ -26,6 +29,7 @@
   max-width: 1400px;
   width: 100%;
   padding: 2rem 0;
+  margin-top: 50px;
 }
 
 .header {
@@ -73,7 +77,7 @@
   transition: all 0.3s $ease-out-expo;
 
   &::before {
-    content: '';
+    content: "";
     position: absolute;
     left: -1rem;
     top: 50%;
@@ -82,7 +86,9 @@
     height: 0;
     background: $color-text;
     border-radius: 2px;
-    transition: height 0.3s $ease-out-expo, top 0.3s $ease-out-expo;
+    transition:
+      height 0.3s $ease-out-expo,
+      top 0.3s $ease-out-expo;
     opacity: 0;
   }
 
@@ -125,7 +131,7 @@
     padding-left: 1.5rem;
 
     &::before {
-      content: '•';
+      content: "•";
       position: absolute;
       left: 0;
       top: 50%;
@@ -156,7 +162,7 @@
 
   &::before,
   &::after {
-    content: '';
+    content: "";
     position: absolute;
     width: 14px;
     height: 2px;
@@ -176,7 +182,9 @@
 .answer {
   display: grid;
   grid-template-rows: 0fr;
-  transition: grid-template-rows 0.3s $ease-out-expo, opacity 0.2s $ease-out-expo;
+  transition:
+    grid-template-rows 0.3s $ease-out-expo,
+    opacity 0.2s $ease-out-expo;
   position: relative;
   overflow: hidden;
 
@@ -185,7 +193,7 @@
   }
 
   &::before {
-    content: '';
+    content: "";
     position: absolute;
     left: -1.5rem;
     top: 0;
@@ -197,7 +205,7 @@
   &.answerOpen {
     grid-template-rows: 1fr;
     opacity: 1;
-    
+
     .answerContent {
       transform: translateY(0);
       opacity: 1;
@@ -213,10 +221,12 @@
   position: relative;
   transform: translateY(10px);
   opacity: 0;
-  transition: transform 0.4s $ease-out-expo, opacity 0.4s $ease-out-expo;
+  transition:
+    transform 0.4s $ease-out-expo,
+    opacity 0.4s $ease-out-expo;
 
   &::before {
-    content: '';
+    content: "";
     position: absolute;
     left: 0;
     top: 0;
@@ -232,7 +242,7 @@
     padding-left: 2rem;
 
     &::before {
-      content: '➤';
+      content: "➤";
       position: absolute;
       left: 0;
       top: 0.1em;
